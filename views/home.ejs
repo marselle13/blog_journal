@@ -1,0 +1,10 @@
+<%- include('partials/header') %>
+<h1>Home</h1>
+<%= homeBody %> <% for (let items in composePost){%>
+<h1><%= composePost[items].title %></h1>
+<p>
+  <%= `${composePost[items].body.substring(0,100)} ...`%>
+  <a href="/posts/<%= composePost[items].title %>">Read More</a>
+</p>
+
+<% } %> <%- include('partials/footer') %>
